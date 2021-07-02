@@ -4,8 +4,8 @@ html {
   }
   
 body{
-    background: url("../images/main-bg-image.jpeg") center center;
-  }
+  background-color: tomato;
+}
 
   * {
     box-sizing: border-box;
@@ -68,8 +68,8 @@ h2 {
     border: 0.1rem solid black;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: black;
-    background-color: rgb(250, 214, 214);
+    color: whitesmoke;
+    background-color: rgb(59, 9, 9);
   }
   
 .btn:hover {
@@ -111,10 +111,14 @@ h2 {
   
 .choice-text {
     padding: 1.5rem;
+    width: 100%;
   }
 
 p{
       margin-bottom: 0;
   }
+
+
+
 
 
