@@ -119,11 +119,11 @@ p{
   }
 
 .correct {
-  background-image: linear-gradient(#37e620, rgb(11, 204, 27));
+  background-image: linear-gradient(#37e620, rgb(29, 41, 30));
 }
 
 .incorrect {
-  background-image: linear-gradient(#f31026, rgb(192, 7, 7));
+  background-image: linear-gradient(#f31026, rgb(29, 41, 30));
 }
 
 
