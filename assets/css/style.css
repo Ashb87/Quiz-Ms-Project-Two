@@ -118,7 +118,12 @@ p{
       margin-bottom: 0;
   }
 
+.correct {
+  background-image: linear-gradient(#37e620, rgb(11, 204, 27));
+}
 
-
+.incorrect {
+  background-image: linear-gradient(#f31026, rgb(192, 7, 7));
+}
 
 

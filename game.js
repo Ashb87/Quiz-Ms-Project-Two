@@ -1,7 +1,8 @@
  //Constants
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 3;
 //Let
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -38,10 +39,6 @@ let questions = [
     },
 ];
 
-//Constants
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
-
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -64,6 +61,7 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number];
     });
     
+    //Removes used questions
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
@@ -75,7 +73,16 @@ choices.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        getNewQuestion();
+        
+        //applies css styling for right or wrong answers
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        //adds slight delay before next question and removes css styling to answers
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+          }, 600);
     });
 });
 
