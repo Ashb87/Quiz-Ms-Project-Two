@@ -19,7 +19,7 @@ let questions = [
         choice2: 'Sir Tom Jones',
         choice3: 'Sir Paul McCartney',
         choice4: 'Sir Elton John',
-        answer: 1,
+        answer: 1, 
     },
     {
         question: 'How many UK number ones did the Beatles have in total?',
