@@ -2,11 +2,24 @@
 html {
     font-size: 62.5%;
   }
-  
+
 body{
-  background-image: linear-gradient(#60ac59, rgb(243, 227, 224));
-  
-}
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("../images/main-bg-image4.jpeg") center center;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+/*  
+body{
+  background: url("../images/main-bg-image4.jpeg") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgba(248, 247, 216, 0.7);
+} */
 
   * {
     box-sizing: border-box;
@@ -121,7 +134,7 @@ p{
 
   /* colors for right and wrong answers */
 .correct {
-  background-image: linear-gradient(#37e620, rgb(29, 41, 30));
+  background-image: linear-gradient(#1fa00e, rgb(255, 255, 255), #1fa00e);
 }
 
 .incorrect {
