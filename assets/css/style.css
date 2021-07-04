@@ -151,3 +151,24 @@ p{
 .hud-main-text{
   text-align: center;
 }
+
+/*End Page Form*/
+
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input{
+  margin-bottom: 10px;
+  width: 200px;
+  padding:10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+input::placeholder{
+  color:rgb(59, 9, 9); 
+}
