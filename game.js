@@ -1,105 +1,116 @@
  //Constants
-const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
-const questionCounterText = document.getElementById("questionCounter");
-const scoreText = document.getElementById("score");
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
-//Let
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuesions = [];
-
-
-//Questions Array
-let questions = [
-    {
-        question: 'Which English Sir has had number ones in the 50’s, 60’s, 70’s, 80’s and 90’s?',
-        choice1: 'Sir Cliff Richard',
-        choice2: 'Sir Tom Jones',
-        choice3: 'Sir Paul McCartney',
-        choice4: 'Sir Elton John',
-        answer: 1, 
-    },
-    {
-        question: 'How many UK number ones did the Beatles have in total?',
-        choice1: '13',
-        choice2: '15',
-        choice3: '17',
-        choice4: '19',
-        answer: 3,
-    },
-    {
-        question: 'In which year did the Spice Girls release Wannabe?',
-        choice1: '1995',
-        choice2: '1996',
-        choice3: '1997',
-        choice4: '1998',
-        answer: 2,
-    },
-];
-
-startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuesions = [...questions];
-    getNewQuestion();
-};
-
-getNewQuestion = () => {
-    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
-        //takes user to the end page
-        return window.location.assign('/end.html');
-    }
-    questionCounter++;
-    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
-
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-    currentQuestion = availableQuesions[questionIndex];
-    question.innerText = currentQuestion.question;
-
-    choices.forEach((choice) => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
-    });
-    
-    //Removes used questions
-    availableQuesions.splice(questionIndex, 1);
-    acceptingAnswers = true;
-};
-
-choices.forEach((choice) => {
-    choice.addEventListener('click', (event) => {
-        if (!acceptingAnswers) return;
-
-        acceptingAnswers = false;
-        const selectedChoice = event.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-        
-        //applies css styling for right or wrong answers
-        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
-        //Increments players score for right answers
-        if (classToApply == 'correct') {
-            incrementScore(CORRECT_BONUS);
-        };
-
-        selectedChoice.parentElement.classList.add(classToApply);
-
-        //adds slight delay before next question and removes css styling to answers
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-          }, 600);
-    });
-});
-
-incrementScore = num => {
-    score += num;
-    scoreText.innerText = score;
-};
-
-startGame();
+ const question = document.getElementById("question");
+ const choices = Array.from(document.getElementsByClassName("choice-text"));
+ const questionCounterText = document.getElementById("questionCounter");
+ const scoreText = document.getElementById("score");
+ const CORRECT_BONUS = 10;
+ const MAX_QUESTIONS = 3;
+ 
+ let currentQuestion = {};
+ let acceptingAnswers = false;
+ let score = 0;
+ let questionCounter = 0;
+ let availableQuesions = [];
+ 
+ 
+ //Questions Array
+ let questions = [
+     {
+         question: 'Which English Sir has had number ones in the 50’s, 60’s, 70’s, 80’s and 90’s?',
+         choice1: 'Sir Cliff Richard',
+         choice2: 'Sir Tom Jones',
+         choice3: 'Sir Paul McCartney',
+         choice4: 'Sir Elton John',
+         answer: 1, 
+     },
+     {
+         question: 'How many UK number ones did the Beatles have in total?',
+         choice1: '13',
+         choice2: '15',
+         choice3: '17',
+         choice4: '19',
+         answer: 3,
+     },
+     {
+         question: 'In which year did the Spice Girls release Wannabe?',
+         choice1: '1995',
+         choice2: '1996',
+         choice3: '1997',
+         choice4: '1998',
+         answer: 2,
+     },
+ ];
+ 
+ startGame = () => {
+     questionCounter = 0;
+     score = 0;
+     availableQuesions = [...questions];
+     getNewQuestion();
+ };
+ 
+ getNewQuestion = () => {
+     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+         localStorage.setItem("mostRecentScore", score);
+         //takes user to the end page
+         return window.location.assign('/end.html');
+     }
+     questionCounter++;
+     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+ 
+     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+     currentQuestion = availableQuesions[questionIndex];
+     question.innerText = currentQuestion.question;
+ 
+     choices.forEach((choice) => {
+         const number = choice.dataset['number'];
+         choice.innerText = currentQuestion['choice' + number];
+     });
+     
+     //Removes used questions
+     availableQuesions.splice(questionIndex, 1);
+     acceptingAnswers = true;
+ };
+ 
+ choices.forEach((choice) => {
+     choice.addEventListener('click', (event) => {
+         if (!acceptingAnswers) return;
+ 
+         acceptingAnswers = false;
+         const selectedChoice = event.target;
+         const selectedAnswer = selectedChoice.dataset['number'];
+         
+         //applies css styling for right or wrong answers
+         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+ 
+         //Increments players score for right answers
+         if (classToApply == 'correct') {
+             incrementScore(CORRECT_BONUS);
+         };
+ 
+         selectedChoice.parentElement.classList.add(classToApply);
+ 
+         //adds slight delay before next question and removes css styling to answers
+         setTimeout(() => {
+             selectedChoice.parentElement.classList.remove(classToApply);
+             getNewQuestion();
+           }, 600);
+     });
+ });
+ 
+ incrementScore = num => {
+     score += num;
+     scoreText.innerText = score;
+ };
+ 
+ //high score display saved to local storage
+ const highScoresList = document.getElementById("highScoresList");
+ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+ 
+ //returns high scores array
+ highScoresList.innerHTML = highScores
+   .map(score => {
+     return `<li class="high-score">${score.name} - ${score.score}</li>`;
+   })
+   .join("");
+ 
+ startGame();
