@@ -5,7 +5,7 @@ html {
   }
 
 body{
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.3)),
+    background: linear-gradient(rgba(28, 231, 55, 0.5), rgba(0,0,0,.5)),
     url("../images/bg.jpeg") center center;
     -webkit-background-size: cover;
   -moz-background-size: cover;
