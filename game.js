@@ -4,7 +4,7 @@
  const questionCounterText = document.getElementById("questionCounter");
  const scoreText = document.getElementById("score");
  const CORRECT_BONUS = 10;
- const MAX_QUESTIONS = 3;
+ const MAX_QUESTIONS = 10;
  
  let currentQuestion = {};
  let acceptingAnswers = false;
@@ -16,18 +16,42 @@
  
  let questions = [];
 
- fetch(questions.json);
-   .then(res => {
-       return res.json();
-   })
+ fetch(
+    "https://opentdb.com/api.php?amount=10&category=11&type=multiple"
+)
 
-   .then((loadedQuestions) => {
-    questions = loadedQuestions;
-    startGame();
-})
-.catch((err) => {
-    console.error(err);
-});
+    .then((resp) => {
+        return resp.json();
+        
+    })
+
+    
+
+    .then((loadedQuestions) => {
+        questions = loadedQuestions.results.map((loadedQuestion) => {
+            const formattedQuestion = {
+                question: loadedQuestion.question,
+            };
+
+            const answerChoices = [...loadedQuestion.incorrect_answers];
+            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            answerChoices.splice(
+                formattedQuestion.answer - 1,
+                0,
+                loadedQuestion.correct_answer
+            );
+
+            answerChoices.forEach((choice, index) => {
+                formattedQuestion['choice' + (index + 1)] = choice;
+            });
+
+            return formattedQuestion;
+        });
+        startGame();
+    })
+    .catch((err) => {
+        console.error(err);
+    });
  
  
  startGame = () => {
@@ -36,6 +60,20 @@
      availableQuesions = [...questions];
      getNewQuestion();
  };
+
+ timer = () => {
+    // set timer decrease 1 every second
+    time = time - 1;
+    if (time < 60) {
+      // display time left
+      timeleft.innerHTML = `<i class="fas fa-clock"> Time Left : ${time} seconds`;
+    }
+    if (time < 1) {
+      // move onto the next question when the time is up
+      clearInterval(update);
+      displayQuestion();
+    }
+  };
  
  getNewQuestion = () => {
      if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
