@@ -13,33 +13,22 @@
  let availableQuesions = [];
  
  
- //Questions Array
- let questions = [
-     {
-         question: 'Which English Sir has had number ones in the 50’s, 60’s, 70’s, 80’s and 90’s?',
-         choice1: 'Sir Cliff Richard',
-         choice2: 'Sir Tom Jones',
-         choice3: 'Sir Paul McCartney',
-         choice4: 'Sir Elton John',
-         answer: 1, 
-     },
-     {
-         question: 'How many UK number ones did the Beatles have in total?',
-         choice1: '13',
-         choice2: '15',
-         choice3: '17',
-         choice4: '19',
-         answer: 3,
-     },
-     {
-         question: 'In which year did the Spice Girls release Wannabe?',
-         choice1: '1995',
-         choice2: '1996',
-         choice3: '1997',
-         choice4: '1998',
-         answer: 2,
-     },
- ];
+ 
+ let questions = [];
+
+ fetch(questions.json);
+   .then(res => {
+       return res.json();
+   })
+
+   .then((loadedQuestions) => {
+    questions = loadedQuestions;
+    startGame();
+})
+.catch((err) => {
+    console.error(err);
+});
+ 
  
  startGame = () => {
      questionCounter = 0;
@@ -81,7 +70,7 @@
          
          //applies css styling for right or wrong answers
          const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
- 
+         
          //Increments players score for right answers
          if (classToApply == 'correct') {
              incrementScore(CORRECT_BONUS);
@@ -104,6 +93,6 @@
  
  
  
- startGame();
+
 
  
