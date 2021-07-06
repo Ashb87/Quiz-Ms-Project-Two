@@ -16,16 +16,12 @@
  
  let questions = [];
 
- fetch(
-    "https://opentdb.com/api.php?amount=10&category=11&type=multiple"
-)
+ fetch("https://opentdb.com/api.php?amount=15&category=12&difficulty=easy&type=multiple")
 
     .then((resp) => {
         return resp.json();
         
     })
-
-    
 
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
@@ -68,15 +64,15 @@
          return window.location.assign('/end.html');
      }
      questionCounter++;
-     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+     questionCounterText.innerHTML = `${questionCounter}/${MAX_QUESTIONS}`;
  
      const questionIndex = Math.floor(Math.random() * availableQuesions.length);
      currentQuestion = availableQuesions[questionIndex];
-     question.innerText = currentQuestion.question;
+     question.innerHTML = currentQuestion.question;
  
      choices.forEach((choice) => {
          const number = choice.dataset['number'];
-         choice.innerText = currentQuestion['choice' + number];
+         choice.innerHTML = currentQuestion['choice' + number];
      });
      
      //Removes used questions
