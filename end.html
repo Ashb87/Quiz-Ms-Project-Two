@@ -11,6 +11,16 @@
     <div class="container">
         <div id="end" class="flex-center flex-column">
             <h1 id='finalScore'></h1>
+            
+            <div id="good-effort" class="hidden">
+                <p class="feedback">Good effort! Save your score and try again to beat it!</p>
+            </div>
+            <div id="congrats" class="hidden">
+                <p class="feedback">Congratulations pop master! New high socre! </p>
+            </div>
+            <div id="no-good" class="hidden">
+                <p class="feedback">What was that? 0 points! Best try again.</p>
+            </div>
             <form>
                 <input type="text" name="username" id="username" placeholder="Your Name">
                 <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
