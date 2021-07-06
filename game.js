@@ -60,20 +60,6 @@
      availableQuesions = [...questions];
      getNewQuestion();
  };
-
- timer = () => {
-    // set timer decrease 1 every second
-    time = time - 1;
-    if (time < 60) {
-      // display time left
-      timeleft.innerHTML = `<i class="fas fa-clock"> Time Left : ${time} seconds`;
-    }
-    if (time < 1) {
-      // move onto the next question when the time is up
-      clearInterval(update);
-      displayQuestion();
-    }
-  };
  
  getNewQuestion = () => {
      if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
