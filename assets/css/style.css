@@ -190,3 +190,12 @@ input::placeholder{
 .high-score:hover{
   transform: scale(1.05);
 }
+
+/* end page feedback quotes */
+
+.feedback{
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
