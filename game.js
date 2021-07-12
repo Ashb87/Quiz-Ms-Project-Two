@@ -77,7 +77,7 @@
      if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
          localStorage.setItem("mostRecentScore", score);
          //takes user to the end page
-         return window.location.assign('/end.html');
+         return window.location.assign('end.html');
      }
      questionCounter++;
      questionCounterText.innerHTML = `${questionCounter}/${MAX_QUESTIONS}`;
