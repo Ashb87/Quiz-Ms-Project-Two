@@ -21,7 +21,7 @@ body{
 h1 {
     font-size: 6rem;
     color: rgb(214, 26, 231);
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-shadow: 3px 3px rgb(92, 243, 32);
   }
   
@@ -151,6 +151,10 @@ p{
 
 .hud-main-text{
   text-align: center;
+}
+
+.bottom-display{
+  margin-bottom: 7rem;
 }
 
 /*End Page Form*/
