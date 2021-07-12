@@ -64,10 +64,10 @@
     time = time - 1;
     if (time < 30) {
       // display time left
-      timeleft.innerHTML = `Time Left : ${time} seconds`;
+      timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`;
     }
     if (time < 1) {
-      // move onto the next question when the time is up
+      // moves to next question when time is up
       clearInterval(update);
       getNewQuestion();
     }
