@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Link to bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css"/>
+    <!--Link to fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
     <!--Link to my custom CSS-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Document</title> 
@@ -23,9 +25,6 @@
               </p>
               <h1 class="hud-main-text" id="questionCounter">
               </h1>
-            </div>
-            <div id="hud-item">
-              <p id="timeleft" class="hud-prefix"></p>
             </div>
             <div id="hud-item">
               <p class="hud-prefix">
@@ -54,9 +53,19 @@
             <p class="choice-prefix">D</p>
             <p class="choice-text" data-number="4">Choice 4</p>
           </div>
+          <div id="hud">
+          <div>
+            <p id="timeleft" class="hud-prefix"></p>
+          </div>
+          <div>
+            <a class="hud-prefix" href="index.html"><i class="fas fa-home"></i></a>
+           
+          </div>
+        </div>
+
         </div>
       </div>
-
-    <script src="game.js"></script>
+   
+      <script src="game.js"></script>
 </body>
 </html>    
