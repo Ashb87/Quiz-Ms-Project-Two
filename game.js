@@ -3,6 +3,7 @@
  const choices = Array.from(document.getElementsByClassName("choice-text"));
  const questionCounterText = document.getElementById("questionCounter");
  const scoreText = document.getElementById("score");
+ const timeleft = document.getElementById("timeleft");
  const CORRECT_BONUS = 10;
  const MAX_QUESTIONS = 10;
  
@@ -11,6 +12,7 @@
  let score = 0;
  let questionCounter = 0;
  let availableQuesions = [];
+ let update = null;
  
  
  
@@ -56,6 +58,20 @@
      availableQuesions = [...questions];
      getNewQuestion();
  };
+
+ timer = () => {
+    // set timer decrease 1 every second
+    time = time - 1;
+    if (time < 30) {
+      // display time left
+      timeleft.innerHTML = `Time Left : ${time} seconds`;
+    }
+    if (time < 1) {
+      // move onto the next question when the time is up
+      clearInterval(update);
+      getNewQuestion();
+    }
+  };
  
  getNewQuestion = () => {
      if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -77,8 +93,11 @@
      
      //Removes used questions
      availableQuesions.splice(questionIndex, 1);
+     // set timer of 30s for each question
+     time = 30;
+     update = setInterval("timer()", 1000);
      acceptingAnswers = true;
- };
+    };
  
  choices.forEach((choice) => {
      choice.addEventListener('click', (event) => {
@@ -102,6 +121,7 @@
          setTimeout(() => {
              selectedChoice.parentElement.classList.remove(classToApply);
              getNewQuestion();
+             clearInterval(update);
            }, 600);
      });
  });
