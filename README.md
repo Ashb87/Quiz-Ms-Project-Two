@@ -1,6 +1,6 @@
 # Milestone Project Two | Music quiz game
 
-View the live project here](https://ashb87.github.io/Quiz-Ms-Project-Two/) <br>
+[View the live project here](https://ashb87.github.io/Quiz-Ms-Project-Two/) <br>
 
 ## About
 
