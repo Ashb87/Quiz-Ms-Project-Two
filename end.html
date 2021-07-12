@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div id="end" class="flex-center flex-column">
-            <h2>Your Score</h2>
+            <h4>Your Score</h4>
             <h1 id='finalScore'></h1>
             
             <div id="good-effort" class="hidden">
@@ -23,8 +23,8 @@
                 <p class="feedback">What was that? 0 points! Best try again.</p>
             </div>
             <form>
-                <input type="text" name="username" id="username" placeholder="Your Name">
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+                <input class="name-input" type="text" name="username" id="username" placeholder="Your Name">
+                <button type="submit" class="btn save-btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
                     Save My Score
                 </button>
             </form>
