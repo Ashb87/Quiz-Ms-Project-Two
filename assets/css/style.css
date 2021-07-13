@@ -1,25 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&display=swap');
 
 html {
-    font-size: 62.5%;
-  }
+  font-size: 62.5%;
+}
 
 body{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,.8)),
     url("../images/bg-music.jpg") center center;
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: orbitron, sans-serif;
+  font-family:  'ABeeZee', sans-serif;
   }
 
   * {
     box-sizing: border-box;
   }
   
+  /* Headings */
+
 h1 {
     font-size: 5.5rem;
+    font-family: Orbitron, sans-serif;
     color: rgb(214, 26, 231);
     margin-bottom: 3rem;
     text-shadow: 3px 3px rgb(92, 243, 32);
@@ -261,4 +265,19 @@ input::placeholder{
 .timer{
   font-size: 3rem;
   color: rgb(248, 217, 39);
+}
+
+
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  .timer{
+    font-size: 2rem;
+  }
 }
