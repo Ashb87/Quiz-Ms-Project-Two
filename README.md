@@ -47,6 +47,13 @@ I want to keep a consistent theme throughout the site by using the same colour c
   * [Desktop display](https://github.com/Ashb87/Quiz-Ms-Project-Two/blob/master/Quiz-project-Ms2/Desktop-wireframe.png)
   * [Mobile and Tablet display](https://github.com/Ashb87/Quiz-Ms-Project-Two/blob/master/Quiz-project-Ms2/Mobile_Tablet%20wireframe.png)
 
+The design of my project has been kept very similar to that of my wireframes. The main difference was on larger screens I had planned to have the answer boxes displayed with two side by side above another two side by side. I decided in the end to display all four answer boxes stacked on top of each other as I found the questions with longer answers were fitting better this way without having to adjust the font size. The text was then not looking too squashed inside its container. I kept the same display throughout all screen sizes adjusting any font sizes accordingly.  
+
+  * #### Imagery
+
+For this project I have used one image to be the main background across all the different pages of the site. It is a black and white patterend image with a music theme. I also placed a transparent overlay on top of the image to soften the brightness of it, and help enhance the interactive parts of the site for the user making it all stand out clearly and be visually appealing as well as usable and easy to see.
+
+<img src="assets/images/imagery.png" width="450" height="300">
 
 ### fixed bugs 
   * json file giving &quot-- changed innerText to innerHTML
