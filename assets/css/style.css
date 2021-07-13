@@ -267,6 +267,24 @@ input::placeholder{
   color: rgb(248, 217, 39);
 }
 
+/* Modal */
+
+.modal-header{
+  background-color: rgb(245, 39, 217);
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+.modal-body{
+  background: linear-gradient(rgb(245, 39, 217), rgb(248, 217, 39))
+}
+
+.modal-footer{
+  background-color: rgb(248, 217, 39);
+  border-top: 0;
+  border-radius: 0;
+}
+
 
 @media screen and (max-width: 575px) {
   h1 {
