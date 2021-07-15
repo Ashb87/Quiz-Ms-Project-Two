@@ -55,5 +55,10 @@ For this project I have used one image to be the main background across all the 
 
 <img src="assets/images/imagery.png" width="450" height="300">
 
+  * #### Color Scheme
+
+ <img src="assets/images/colors.png" width="450" height="300">   
+  
+
 ### fixed bugs 
   * json file giving &quot-- changed innerText to innerHTML
