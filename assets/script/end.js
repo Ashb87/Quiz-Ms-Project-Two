@@ -24,7 +24,7 @@ if (mostRecentScore > Math.max(...highScoresArray)) {
 } else if (mostRecentScore == 0) {
   noGood.classList.remove("hidden");
 } else {
-  // display a nice  if it's not a new high score
+  // display a good effort message if it's not a new high score
   goodEffort.classList.remove("hidden");
 }
 
