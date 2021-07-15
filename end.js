@@ -24,7 +24,7 @@ if (mostRecentScore > Math.max(...highScoresArray)) {
 } else if (mostRecentScore == 0) {
   noGood.classList.remove("hidden");
 } else {
-  // display a nice job image if it's not a new high score
+  // display a nice  if it's not a new high score
   goodEffort.classList.remove("hidden");
 }
 
@@ -47,5 +47,5 @@ saveHighScore = (e) => {
     highScores.splice(5);
     
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/');
+    window.location.assign('index.html');
 };
