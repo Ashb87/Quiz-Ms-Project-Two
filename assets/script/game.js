@@ -7,30 +7,29 @@ const timeleft = document.getElementById("timeleft");
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 
+//Let
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
 let update = null;
-
-
-
 let questions = [];
 
+//pulling questions from OPEN TRIVIA DATABASE api
 fetch("https://opentdb.com/api.php?amount=15&category=12&difficulty=easy&type=multiple")
-
     .then((resp) => {
         return resp.json();
-
     })
 
+    //Load questions
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
+            //sets the question format
             const formattedQuestion = {
                 question: loadedQuestion.question,
             };
-
+            //sets the choice format
             const answerChoices = [...loadedQuestion.incorrect_answers];
             formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
             answerChoices.splice(
@@ -38,7 +37,7 @@ fetch("https://opentdb.com/api.php?amount=15&category=12&difficulty=easy&type=mu
                 0,
                 loadedQuestion.correct_answer
             );
-
+            //sets incorrect answer format
             answerChoices.forEach((choice, index) => {
                 formattedQuestion['choice' + (index + 1)] = choice;
             });
@@ -47,10 +46,10 @@ fetch("https://opentdb.com/api.php?amount=15&category=12&difficulty=easy&type=mu
         });
         startGame();
     })
+    //catches error
     .catch((err) => {
         console.error(err);
     });
-
 
 startGame = () => {
     questionCounter = 0;
@@ -59,6 +58,7 @@ startGame = () => {
     getNewQuestion();
 };
 
+//countdown timer for each question
 timer = () => {
     // set timer decrease 1 every second
     time = time - 1;
@@ -75,6 +75,7 @@ timer = () => {
 
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        //saves score to local storage
         localStorage.setItem("mostRecentScore", score);
         //takes user to the end page
         return window.location.assign('end.html');
