@@ -1,28 +1,28 @@
- //Constants
- const question = document.getElementById("question");
- const choices = Array.from(document.getElementsByClassName("choice-text"));
- const questionCounterText = document.getElementById("questionCounter");
- const scoreText = document.getElementById("score");
- const timeleft = document.getElementById("timeleft");
- const CORRECT_BONUS = 10;
- const MAX_QUESTIONS = 10;
- 
- let currentQuestion = {};
- let acceptingAnswers = false;
- let score = 0;
- let questionCounter = 0;
- let availableQuesions = [];
- let update = null;
- 
- 
- 
- let questions = [];
+//Constants
+const question = document.getElementById("question");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionCounterText = document.getElementById("questionCounter");
+const scoreText = document.getElementById("score");
+const timeleft = document.getElementById("timeleft");
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 10;
 
- fetch("https://opentdb.com/api.php?amount=15&category=12&difficulty=easy&type=multiple")
+let currentQuestion = {};
+let acceptingAnswers = false;
+let score = 0;
+let questionCounter = 0;
+let availableQuesions = [];
+let update = null;
+
+
+
+let questions = [];
+
+fetch("https://opentdb.com/api.php?amount=15&category=12&difficulty=easy&type=multiple")
 
     .then((resp) => {
         return resp.json();
-        
+
     })
 
     .then((loadedQuestions) => {
@@ -50,89 +50,83 @@
     .catch((err) => {
         console.error(err);
     });
- 
- 
- startGame = () => {
-     questionCounter = 0;
-     score = 0;
-     availableQuesions = [...questions];
-     getNewQuestion();
- };
 
- timer = () => {
+
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
+};
+
+timer = () => {
     // set timer decrease 1 every second
     time = time - 1;
     if (time < 30) {
-      // display time left
-      timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`;
+        // display time left
+        timeleft.innerHTML = `<i class="far fa-clock"></i> : ${time} seconds`;
     }
     if (time < 1) {
-      // moves to next question when time is up
-      clearInterval(update);
-      getNewQuestion();
+        // moves to next question when time is up
+        clearInterval(update);
+        getNewQuestion();
     }
-  };
- 
- getNewQuestion = () => {
-     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-         localStorage.setItem("mostRecentScore", score);
-         //takes user to the end page
-         return window.location.assign('end.html');
-     }
-     questionCounter++;
-     questionCounterText.innerHTML = `${questionCounter}/${MAX_QUESTIONS}`;
- 
-     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
-     currentQuestion = availableQuesions[questionIndex];
-     question.innerHTML = currentQuestion.question;
- 
-     choices.forEach((choice) => {
-         const number = choice.dataset['number'];
-         choice.innerHTML = currentQuestion['choice' + number];
-     });
-     
-     //Removes used questions
-     availableQuesions.splice(questionIndex, 1);
-     // set timer of 30s for each question
-     time = 30;
-     update = setInterval("timer()", 1000);
-     acceptingAnswers = true;
-    };
- 
- choices.forEach((choice) => {
-     choice.addEventListener('click', (event) => {
-         if (!acceptingAnswers) return;
- 
-         acceptingAnswers = false;
-         const selectedChoice = event.target;
-         const selectedAnswer = selectedChoice.dataset['number'];
-         
-         //applies css styling for right or wrong answers
-         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-         
-         //Increments players score for right answers
-         if (classToApply == 'correct') {
-             incrementScore(CORRECT_BONUS);
-         };
- 
-         selectedChoice.parentElement.classList.add(classToApply);
- 
-         //adds slight delay before next question and removes css styling to answers
-         setTimeout(() => {
-             selectedChoice.parentElement.classList.remove(classToApply);
-             getNewQuestion();
-             clearInterval(update);
-           }, 600);
-     });
- });
- 
- incrementScore = num => {
-     score += num;
-     scoreText.innerText = score;
- };
- 
- 
- 
+};
 
+getNewQuestion = () => {
+    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem("mostRecentScore", score);
+        //takes user to the end page
+        return window.location.assign('end.html');
+    }
+    questionCounter++;
+    questionCounterText.innerHTML = `${questionCounter}/${MAX_QUESTIONS}`;
 
- 
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    currentQuestion = availableQuesions[questionIndex];
+    question.innerHTML = currentQuestion.question;
+
+    choices.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choice.innerHTML = currentQuestion['choice' + number];
+    });
+
+    //Removes used questions
+    availableQuesions.splice(questionIndex, 1);
+    // set timer of 30s for each question
+    time = 30;
+    update = setInterval("timer()", 1000);
+    acceptingAnswers = true;
+};
+
+choices.forEach((choice) => {
+    choice.addEventListener('click', (event) => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = event.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        //applies css styling for right or wrong answers
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+        //Increments players score for right answers
+        if (classToApply == 'correct') {
+            incrementScore(CORRECT_BONUS);
+        };
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        //adds slight delay before next question and removes css styling to answers
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+            clearInterval(update);
+        }, 600);
+    });
+});
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+};
