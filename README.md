@@ -65,6 +65,29 @@ For this project I wanted the colours to be vibrant and really pop out against t
 
 The two fonts I have used in this project are **Yomogi** and **Orbitron** both imported from **Google fonts.** The **Orbitron** font has been used for my h1 headings and also the quesion counter and score counter on the game page. I have used **Yomogi** for everything else. I chose these because I wanted something bold and a bit different to stand out for the headings and found **Orbitron** fitted this really well and suited the style of design I was going for. For the rest of the text I wanted something that would be easy to read, compliment the orbitron font and also be a little different to standard fonts. When searching google fonts **Yomogi** was the one that stood out to me the most and I think looks great with the rest of the design. 
   
+## Features
+
+The design and layout of the game is responsvie to all different screen sizes and remains attractive and easy to use no matter what device it is being played on.
+
+  * ### Home Page
+    * Pop up modal when user clicks on the **rules** button that explains how the game works.
+    * **High Scores** button that when clicked will link the user to the top 5 highscores. These scores are stored and pulled from local storage.
+    * **Play** button that links the user to the main game page.
+    * Social media links that I have used to help with the design of the page. These links will just take the user to the home page of the selected link.
+
+  * ### Game Page
+    * A question counter that shows the user which question number they are on out of 10.
+    * A score counter that shows the user what they're current score is and that increments by 10 for every correct answer.
+    * A question and 4 possible answers to choose from. The selected answer will turn red if it is wrong and green if it is correct.
+    * A 30 second timer that counts down on screen and resets for each new question.
+    * A home button that will take the user back to the main page.
+
+  * ### End Page
+    * A display of the users and score.
+    * A message for the user that changes depending on the score achieved.
+    * The optiion for the user to enter their name and save their score which will be added to the highscore page if the score is high enough.
+    * A button to let the user play again.
+    * A button to take the user back to the home page.
 
 ### fixed bugs 
   * json file giving &quot-- changed innerText to innerHTML
