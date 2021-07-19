@@ -57,6 +57,8 @@ For this project I have used one image to be the main background across all the 
 
   * #### Color Scheme
 
+For this project I wanted the colours to be vibrant and really pop out against the darker background that I chose. My three main colours are a shade of **Pink,** **Yellow** and **Greeen** which are named **Hot Magenta,** **Sizzling Sunrise** and **Harlequin** respectively. I have used these colours throughout all the differnt elements of the game 
+
  <img src="assets/images/colors.png" width="450" height="300">   
   
 
