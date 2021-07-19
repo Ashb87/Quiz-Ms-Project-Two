@@ -53,13 +53,17 @@ The design of my project has been kept very similar to that of my wireframes. Th
 
 For this project I have used one image to be the main background across all the different pages of the site. It is a black and white patterend image with a music theme. I also placed a transparent overlay on top of the image to soften the brightness of it, and help enhance the interactive parts of the site for the user making it all stand out clearly and be visually appealing as well as usable and easy to see.
 
-<img src="assets/images/imagery.png" width="450" height="300">
+<img src="assets/images/bg-image.png" width="450" height="300">
 
   * #### Color Scheme
 
-For this project I wanted the colours to be vibrant and really pop out against the darker background that I chose. My three main colours are a shade of **Pink,** **Yellow** and **Greeen** which are named **Hot Magenta,** **Sizzling Sunrise** and **Harlequin** respectively. I have used these colours throughout all the differnt elements of the game 
+For this project I wanted the colours to be vibrant and really pop out against the darker background that I chose. My three main colours are a shade of **Pink,** **Yellow** and **Greeen** which are named **Hot Magenta,** **Sizzling Sunrise** and **Harlequin** respectively. I have used these colours throughout all the differnt elements of the game including text colour and text shadow, buttons, links and shadowing for all the clickable elements. I had a general idea of what colours I wanted to use and then used the google color picker to find the exact shades I wanted and that I feel have complimented each other really well. 
 
  <img src="assets/images/colors.png" width="450" height="300">   
+
+  * #### Typography
+
+The two fonts I have used in this project are **Yomogi** and **Orbitron** both imported from **Google fonts.** The **Orbitron** font has been used for my h1 headings and also the quesion counter and score counter on the game page. I have used **Yomogi** for everything else. I chose these because I wanted something bold and a bit different to stand out for the headings and found **Orbitron** fitted this really well and suited the style of design I was going for. For the rest of the text I wanted something that would be easy to read, compliment the orbitron font and also be a little different to standard fonts. When searching google fonts **Yomogi** was the one that stood out to me the most and I think looks great with the rest of the design. 
   
 
 ### fixed bugs 
