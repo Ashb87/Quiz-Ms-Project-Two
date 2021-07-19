@@ -89,5 +89,12 @@ The design and layout of the game is responsvie to all different screen sizes an
     * A button to let the user play again.
     * A button to take the user back to the home page.
 
+## Features I would like to implement
+If I was to take this game further I would like to add some different features for the user. These are:
+  * The options to be more specific with which questions they could answer. For example they could choose from different decades of music like 60's, 70's 80's. Or pick the genre of music they like most, e.g rock, RnB, pop. 
+  * An option to chose the level of difficulty of the quesiotns.
+  * The option to share their score on social media directly from the game.
+  
+
 ### fixed bugs 
   * json file giving &quot-- changed innerText to innerHTML
