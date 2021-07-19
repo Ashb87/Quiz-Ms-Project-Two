@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 
 html {
   font-size: 62.5%;
@@ -12,7 +12,7 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family:  'ABeeZee', sans-serif;
+  font-family:  'Yomogi', cursive;
   }
 
   * {
@@ -117,7 +117,7 @@ h4{
 }
 
 .save-btn{
-  font-family: 'ABeeZee', sans-serif;
+  font-family:  'Yomogi', cursive;
 }
 
 .choice-container {
