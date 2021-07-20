@@ -17,11 +17,11 @@ let update = null;
 let questions = [];
 
 //pulling questions from OPEN TRIVIA DATABASE api
-fetch("https://opentdb.com/api.php?amount=15&category=12&difficulty=easy&type=multiple")
+fetch("https://opentdb.com/api.php?amount=50&category=12&difficulty=easy&type=multiple")
     .then((resp) => {
         return resp.json();
     })
-
+    
     //Load questions
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
