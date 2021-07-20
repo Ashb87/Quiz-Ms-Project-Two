@@ -279,6 +279,10 @@ input::placeholder{
   background: linear-gradient(rgb(245, 39, 217), rgb(92, 243, 32))
 }
 
+.modal-body h3{
+  font-size: 2rem;
+}
+
 .modal-footer{
   background-color: rgb(92, 243, 32);
   border-top: 0;
