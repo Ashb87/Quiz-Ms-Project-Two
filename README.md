@@ -83,6 +83,7 @@ The design and layout of the game is responsvie to all different screen sizes an
     * A question and 4 possible answers to choose from. The selected answer will turn red if it is wrong and green if it is correct.
     * A 30 second timer that counts down on screen and resets for each new question.
     * A home button that will take the user back to the main page.
+    * A spinning loader is displayed briefly on screen before the questions are loaded.
 
   * ### End Page
     * A display of the users and score.
@@ -220,6 +221,69 @@ If I was to take this game further I would like to add some different features f
   - From the home page the user can click the *Highscores* button and be taken to the top 5 leaderboard. These scores are saved to and pulled from local storage and spliced and put in order to just display the top 5 scores. 
   - This has been tested using different devices to check that the scores save and display as they should.
 
+### Features Testing
+Any relevant screenshots can be seen above in the **user stories** testing section.
+
+* ### Home Page
+    **1.Pop up modal when user clicks on the **rules** button that explains how the game works.**
+    
+    - When the Rules button is clicked the modal displays on the screen, This has been tested on different devices and works as intended everytime.
+
+    **2.**High Scores** button that when clicked will link the user to the top 5 highscores. These scores are stored and pulled from local storage.**
+
+    - This function is working as intended, it has been tested on different devices with different scores being saved to the local storage. Then displaying the top 5 highest scores in the correct order.
+
+    **3.**Play** button that links the user to the main game page.**
+
+    - This button has been tested many times across various devices and works as intended.
+
+    **4.Social media links that I have used to help with the design of the page. These links will just take the user to the home page of the selected link.**
+
+    - These links have been added purely to add to the design of the page. Each link works as expected and takes the user to the homepage of the selected media link and opens in a new browser window.
+
+  * ### Game Page
+    **1.A question counter that shows the user which question number they are on out of 10.**
+ 
+    **2.A score counter that shows the user what they're current score is and that increments by 10 for every correct answer.**
+
+    - Both of the above have been tested many times on differnet devices and increment the question number and score as expected everytime.
+
+    **3.A question and 4 possible answers to choose from. The selected answer will turn red if it is wrong and green if it is correct.**
+
+    - The questions are pulled from the *open trivia base* API and come with 4 possible answers for each question. The answers are displayed in different orders eah time. When the correct answer is clicked it turns green. When it's wrong it will display red. I have tested this extensively and also googled answers for the questions I don't know to confirm the correct colour is displayed depending on which answer is selected.
+
+    **4.A 30 second timer that counts down on screen and resets for each new question.**
+
+    - The timer for each question displays and works as intended with the time restarting for each new question and counting down from 30 at the correct speed.
+
+    **5.A home button that will take the user back to the main page.**
+
+    - A simple home logo button will take the user back to the main menu on the home page. This link has been checked many times and works as expected.
+
+    **6.A spinning loader is displayed briefly on screen before the questions are loaded.**
+
+    - When the user clicks on the play button a spinning loader displays on the screen while the questions are loading to prevent the user seeing either a blank screen or dummy text in place of the actual questions.
+
+  * ### End Page
+    **A display of the users end score.**
+
+    - This has been checked and displays the correct score after the 10th question is answered. 
+
+    **A message for the user that changes depending on the score achieved.**
+
+    - Depending if the user scores 0, gets a new high score, or something in between, a different end message will be displayed. This has been checked for each scenario and works as expected each time.
+
+    **The optiion for the user to enter their name and save their score which will be added to the highscore page if the score is high enough.**
+
+    - I have checked this using different devices and also asked friends and family to play the game and save their score to see if they appear on the leaderboard. Each time it has worked as intended.
+
+    **A button to let the user play again.**
+
+    - At the end of the game the user has the option to play again. By clicking the *Play Again* button the user is automatically taken back to the start of the game. This works as expected.
+
+    **A button to take the user back to the home page.**
+
+    - At the end of the game the user has the option to return to the home page. By clicking the *Home* button the user is automatically taken back to the main menu This works as expected.
 
 ### Responsive Testing
 
@@ -231,6 +295,32 @@ As well as using the chrome dev tools I also tested the site myself across as ma
 Initially I was using the Orbitron font for the questions and answers as well as just the headers, but I found that on smaller screens it was taking up a lot of room for the questions so decided to change it to the Yomogi font and felt it had a much better look acroos the game and suited the smaller screen sizes much better.
 
 When I felt the site was close to being complete I used the mockup screenshot generator **am I responsive** to get an image of the homepage across different size devices and have used this image at the top of this README file.
+
+### HTML and CSS Validator
+
+* To test my HTML code I used the [W3C Markup Validator Tool](https://validator.w3.org/)
+
+Each HTML page has been put through the Markup Validator. 
+
+- The index.html page came back with no warnings or errors.
+- The game.html page came back with 2 warnings for using empty headings. These are my h1 and h2 headings. They are used in the HTML page to display, structure and style the page, but the content is being filled in the game.js page using javaScript. It also came back with an error for using the same id more than once. So I changed it to a class instead and this resolved the issue.
+- The end.html page again came back with 1 warning for the same reason as above using an empty h1 element.
+The highscores.html came back with no warnings or errors.
+
+* To test my CSS code I used the [W3C CSS Validator Tool](https://jigsaw.w3.org/css-validator/) 
+
+I then ran my CSS code through the CSS Validator which came back with no issues.
+
+Results pictured below <br>
+<img src="assets/images/css-validator.png" width="600" height="300">
+
+### Lighthouse Testing
+
+### Further Testing
+
+* I have tested the site across different browsers incluing, **Google Chrome,** **Safari,** **Mozilla Firefox** and **Microsoft Edge.** to see how it performs across the different browsers and if it would affect its performance or display. The site worked as expected across all browsers and the display remained exactly the same.
+* As previously mentioned I have personally done extensive testing of the game across different devices including **Iphone XR,** **Iphone 12,** **Ipad mini,** **Samsung galaxy tablet,** **Apple macbook air** and an **Apple Imac.** On all of these devices the game and all of its features run smoothly and as expected and the display adjusts accordingly to the screen size its being displayed on.
+* I have also asked friends, family and members of a group in the slack community to play and test the game and give their honest review especially regarding any issues with the performance. The overall feedback was very positive with no known issues or bugs and each saying the game worked well on their devices.
 
  
 
