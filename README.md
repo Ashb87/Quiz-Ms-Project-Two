@@ -322,7 +322,45 @@ Results pictured below <br>
 * As previously mentioned I have personally done extensive testing of the game across different devices including **Iphone XR,** **Iphone 12,** **Ipad mini,** **Samsung galaxy tablet,** **Apple macbook air** and an **Apple Imac.** On all of these devices the game and all of its features run smoothly and as expected and the display adjusts accordingly to the screen size its being displayed on.
 * I have also asked friends, family and members of a group in the slack community to play and test the game and give their honest review especially regarding any issues with the performance. The overall feedback was very positive with no known issues or bugs and each saying the game worked well on their devices.
 
+### Known Issues and Bugs
+
+* When I first added the link to the JSON API to get the questions I noticed that any question or answer with quotation marks were being displayed as **&quot** rathen than the quote marks themselves. After lots of google searching I found a solution that suggested changing the *innerText* to *innerHTML* in the game.js file. This resolved the issue and then displayed the questions as intended.
+* When I first added my timer for the 30 second countdown, I noticed that for each new question the timer was going down quicker everytime a new question was loaded. Again after researching this issue on google I realised that each time a new question was loaded the timer function was being loaded again but not reset and so going twice as fast than on the previous question. By adding **clearInterval(update);** to the timer function this stopped this problem and reset the timer for each new question.
+
+## Deployment
+
+### Initial creation
+
+I created the repository using the following steps:
+ 1. Logging into my [GitHub](https://github.com/Ashb87/Quiz-Ms-Project-Two) account and clickng the green button near the top left of the page displaying the text **NEW.**
+ 2. This took me to a page with the option to create a new repository. Under *repository template* I clicked on the *code institute* template.
+ I chose a name for the repository suitable for the project and then clicked the *create repository* button.
+ 3. I opened the new repository and clicked the green *gitpod* button to create a new workplace in Gitpod for writing and editing my code to develop the site.
+
+### Github Pages
+
+My project was deployed to GitHub pages using the following steps:
+ 1. Logging in to my [GitHub](https://github.com/Ashb87/Quiz-Ms-Project-Two) account and opening the relevant repository.
+ 2. Click on the settings button, located just above the green **GITPOD** button.
+ 3. In settings scroll down to the **GitHub Pages** section.
+ 4. Under **source** click the dropdown button labelled **None** and select **Master Branch.**
+ 5. The page will automatically refresh itself and after a few moments the published site link will be availible to click 
+ on the **GitHub Page** section.
+
+### Forking the GitHub Repository
+
+Forking a repository enables us to make a copy of the original repository on our GitHub account so we can view it and make changes with out affecting the original work.
+This is done using the following steps:
+ 1. Log in to [GitHub](https://github.com/Ashb87/Quiz-Ms-Project-Two) account and select the relevant repository.
+ 2. To the top right of the page there are three the buttons, the furthest right says **Fork.** Click on this button.
+ 3. A copy of the original repository will now be in your account.
+
+### Making a Clone
+
+To make a clone of my project use the following steps:
+ 1. Go to my [account](https://github.com/Ashb87/Quiz-Ms-Project-Two) and locate relevant repository.
+ 2. Next to the green **Gitpod** button, click on **CODE.**
+ 3. Click on **Download Zip.**
+ 4. Once dowloaded, you can extract the zip file's contents and save to a desktop and run the website locally.
  
 
-### fixed bugs 
-  * json file giving &quot-- changed innerText to innerHTML
