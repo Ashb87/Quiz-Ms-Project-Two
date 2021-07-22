@@ -6,7 +6,9 @@ const scoreText = document.getElementById("score");
 const timeleft = document.getElementById("timeleft");
 const loader = document.getElementById("loader");
 const game = document.getElementById("game");
+//points per score
 const CORRECT_BONUS = 10;
+//number of questions per game
 const MAX_QUESTIONS = 10;
 
 //Let
