@@ -316,10 +316,25 @@ Results pictured below <br>
 
 ### Lighthouse Testing
 
-<img src="assets/images/index-lighthouse.png" width="450" height="300">
-<img src="assets/images/game-lighthouse.png" width="450" height="300">
-<img src="assets/images/end-lighthouse.png" width="450" height="300">
-<img src="assets/images/highscore-lighthouse.png" width="450" height="300">
+I tested the performance of each page through google lighthouse, and have added screenshots of the results below. 
+
+### Home page <br>
+
+<img src="assets/images/index-lighthouse.png" width="450" height="250">
+
+### Game page <br>
+
+<img src="assets/images/game-lighthouse.png" width="450" height="250">
+
+### End page <br>
+
+<img src="assets/images/end-lighthouse.png" width="450" height="250">
+
+### Highscore page <br>
+
+<img src="assets/images/highscore-lighthouse.png" width="450" height="250">
+
+As displayed in the screenshots the overall scores I got for each page were really good. When looking in to why *accessibility* was getting the lowest score, ranging between 90 and 95, the reason given was **Background and foreground colors do not have a sufficient contrast ratio.** I believe that the contrast of colours works well throughout the game on each page and everything is clear and easy to read. The *best practices* score is slightly lower on the index.html page than on the others with a score of 93. The reason given for this is *Includes front-end JavaScript libraries with known security vulnerabilities* When looking further in to this it is becuase I have used bootstrap and jQuery to help build the modal. Other than these points I am really pleased with the scores achieved.
 
 ### Further Testing
 
