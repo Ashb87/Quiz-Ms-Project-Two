@@ -221,8 +221,18 @@ If I was to take this game further I would like to add some different features f
   - This has been tested using different devices to check that the scores save and display as they should.
 
 
-     
-  
+### Responsive Testing
+
+To help with the responsiveness of my project I was using chrome dev tools throughout the build of the game. This helped to see how the game would adapt to different screen sizes and devices. It helped me choose appropriate font sizes so to not look too large and also enabled me to determine at which point I would need to add a media query. After testing with the dev tools I only ended up adding a media query for small screens 575px and smaller. This was necessary so that the questions and answers didn't appear too large on mobile devices, but I found that anything larger than this, everything still displayed nicely on the screen.
+
+As well as using the chrome dev tools I also tested the site myself across as many different devices that I had access to. Theese included **Iphone xr,** **Iphone 12,** **Ipad mini,**
+**Samsung galaxy tablet,** **Apple macbook air** and a 21.5 inch **Apple imac** These devices gave me a good variation of the most common screen sizes used. The game responded well to each of the different screen sizes and displayed as I intended. 
+
+Initially I was using the Orbitron font for the questions and answers as well as just the headers, but I found that on smaller screens it was taking up a lot of room for the questions so decided to change it to the Yomogi font and felt it had a much better look acroos the game and suited the smaller screen sizes much better.
+
+When I felt the site was close to being complete I used the mockup screenshot generator **am I responsive** to get an image of the homepage across different size devices and have used this image at the top of this README file.
+
+ 
 
 ### fixed bugs 
   * json file giving &quot-- changed innerText to innerHTML
