@@ -86,7 +86,7 @@ The design and layout of the game is responsvie to all different screen sizes an
     * A spinning loader is displayed briefly on screen before the questions are loaded.
 
   * ### End Page
-    * A display of the users and score.
+    * A display of the users end score.
     * A message for the user that changes depending on the score achieved.
     * The optiion for the user to enter their name and save their score which will be added to the highscore page if the score is high enough.
     * A button to let the user play again.
@@ -316,6 +316,11 @@ Results pictured below <br>
 
 ### Lighthouse Testing
 
+<img src="assets/images/index-lighthouse.png" width="450" height="300">
+<img src="assets/images/game-lighthouse.png" width="450" height="300">
+<img src="assets/images/end-lighthouse.png" width="450" height="300">
+<img src="assets/images/highscore-lighthouse.png" width="450" height="300">
+
 ### Further Testing
 
 * I have tested the site across different browsers incluing, **Google Chrome,** **Safari,** **Mozilla Firefox** and **Microsoft Edge.** to see how it performs across the different browsers and if it would affect its performance or display. The site worked as expected across all browsers and the display remained exactly the same.
@@ -326,6 +331,7 @@ Results pictured below <br>
 
 * When I first added the link to the JSON API to get the questions I noticed that any question or answer with quotation marks were being displayed as **&quot** rathen than the quote marks themselves. After lots of google searching I found a solution that suggested changing the *innerText* to *innerHTML* in the game.js file. This resolved the issue and then displayed the questions as intended.
 * When I first added my timer for the 30 second countdown, I noticed that for each new question the timer was going down quicker everytime a new question was loaded. Again after researching this issue on google I realised that each time a new question was loaded the timer function was being loaded again but not reset and so going twice as fast than on the previous question. By adding **clearInterval(update);** to the timer function this stopped this problem and reset the timer for each new question.
+* I have noticed playing the game on my Iphone, when clicking on an answer the hover effect remains active for when the next question is displayed, leaving the previously selected answer highlighted. Although this doesn't effect the game play at all it is an issue I would like to resolve. As of yet I have not found a solution to this. 
 
 ## Deployment
 
@@ -363,4 +369,20 @@ To make a clone of my project use the following steps:
  3. Click on **Download Zip.**
  4. Once dowloaded, you can extract the zip file's contents and save to a desktop and run the website locally.
  
+## Credits
 
+### Code & Content
+
+* [Bootstrap](https://getbootstrap.com/) was used for the pop up modal on the home page
+* [Google](https://www.google.com/) was used to find the background image used on each page of the project. It was also used extensively to help research the project, find solutions to any quries or issues I had and help find example codes to use in my own project.
+* [W3schools](https://www.w3schools.com/) was used to help build the spinning loader displayed before the questions are loaded.
+* [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) was used to help structure and display the layout of my game. 
+* [James Q Quick](https://www.youtube.com/playlist?list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) This series of videos was the biggest help throughout this project for me. It gave me a solid base to work from where I could then adapt it to suit my own needs and style. It helped me to understand how the code was implemented and helped with my confidence using JavaScript.
+* [Muhanad Hasan](https://www.youtube.com/watch?v=9-5URe9CykA&t=113s) This video helped me to make my own countdown timer for each question.
+* [Stackoverflow](https://stackoverflow.com/) was used to help find solutions to the issues I had whilst building my project.
+
+### Acknowledgements
+
+* The **Mini Feb 20201** team on slack for all the feedback and support given to each other.
+* My mentor Maranatha Ilesanmi for helping and giving advice for my second milestone project.
+* Friends and Family who have taken their time to offer advice and feedback duirng the devolopment of my project.
