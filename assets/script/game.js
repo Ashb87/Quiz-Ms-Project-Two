@@ -4,6 +4,8 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 const timeleft = document.getElementById("timeleft");
+const loader = document.getElementById("loader");
+const game = document.getElementById("game");
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 
@@ -51,11 +53,15 @@ fetch("https://opentdb.com/api.php?amount=50&category=12&difficulty=easy&type=mu
         console.error(err);
     });
 
+    //start game function
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
     getNewQuestion();
+    //adds and hides loader while questions load
+    game.classList.remove("hidden");
+    loader.classList.add("hidden");
 };
 
 //countdown timer for each question
