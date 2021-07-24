@@ -20,6 +20,8 @@ let availableQuesions = [];
 let update = null;
 let questions = [];
 
+// Used James Q Quick video on youtube for reference-link can be found in credits section of README file
+
 //pulling questions from OPEN TRIVIA DATABASE api
 fetch("https://opentdb.com/api.php?amount=50&category=12&difficulty=easy&type=multiple")
     .then((resp) => {

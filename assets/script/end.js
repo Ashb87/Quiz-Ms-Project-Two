@@ -10,6 +10,7 @@ const noGood = document.getElementById("no-good");
 //sets the amount of high scores to be saved and displayed
 const MAX_HIGH_SCORES = 5;
 
+// Used James Q Quick video on youtube for reference-link can be found in credits section of README file
 
 // get the top five high scores and push them into an array
 let highScoresArray = [];
