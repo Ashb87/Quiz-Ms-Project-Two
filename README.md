@@ -8,7 +8,7 @@
 
 This website has been created for my Milestone 2 Interactive Frontend Development project. 
 I want to create a music quiz game with a varied choice of questions based on all types of music to test the users knowledge. The user will be given a random 10 questions, worth 10 points a quesiton, with 30 seconds to answer each.
-With a maximum of 100 points availible, the user will then be able to save their high score and try to get on the top 5 leaderboard.
+With a maximum of 100 points available, the user will then be able to save their high score and try to get on the top 5 leaderboard.
 
 ## Contents 
  
@@ -50,7 +50,7 @@ With a maximum of 100 points availible, the user will then be able to save their
 ### Site Goals
 
   1. I want the site to be attractive, responsive and easy to use for the user.
-  2. I want the site to work as intended incrementing the quesitons and score as the user progresses, with the timer going down for each question.
+  2. I want the site to work as intended incrementing the questions and score as the user progresses, with the timer going down for each question.
   3. I want the user to have a varied choice of questions.
   4. I want the user to be able to save their score.
   5. I want the user to be able to navigate easily through the different pages of the site.
@@ -84,7 +84,7 @@ I want to keep a consistent theme throughout the site by using the same colour c
   * [Desktop display](https://github.com/Ashb87/Quiz-Ms-Project-Two/blob/master/Quiz-project-Ms2/Desktop-wireframe.png)
   * [Mobile and Tablet display](https://github.com/Ashb87/Quiz-Ms-Project-Two/blob/master/Quiz-project-Ms2/Mobile_Tablet%20wireframe.png)
 
-The design of my project has been kept very similar to that of my wireframes. The main difference was on larger screens I had planned to have the answer boxes displayed with two side by side above another two side by side. I decided in the end to display all four answer boxes stacked on top of each other as I found the questions with longer answers were fitting better this way without having to adjust the font size. The text was then not looking too squashed inside its container. I kept the same display throughout all screen sizes adjusting any font sizes accordingly.  
+The design of my project has been kept very similar to that of my wireframes. The main difference was on larger screens I had planned to have the answer boxes displayed with two side by side, above another two side by side. I decided in the end to display all four answer boxes stacked on top of each other as I found the questions with longer answers were fitting better this way without having to adjust the font size. The text was then not looking too squashed inside its container. I kept the same display throughout all screen sizes adjusting any font sizes accordingly.  
 
   * #### Imagery
 
@@ -123,7 +123,7 @@ The design and layout of the game is responsvie to all different screen sizes an
   * ### End Page
     * A display of the users end score.
     * A message for the user that changes depending on the score achieved.
-    * The optiion for the user to enter their name and save their score which will be added to the highscore page if the score is high enough.
+    * The option for the user to enter their name and save their score which will be added to the highscore page if the score is high enough.
     * A button to let the user play again.
     * A button to take the user back to the home page.
 
@@ -148,7 +148,7 @@ If I was to take this game further I would like to add some different features f
   * [Balsamiq](https://balsamiq.com/) <br>
      I used balsamiq to design and draw up my wireframes before starting the project.
   * [Bootstrap](https://getbootstrap.com/) <br>
-     I used the custom built bootstrap modal for my pop up **Rules** button expianing to the user how the game works.
+     I used the custom built bootstrap modal for my pop up **Rules** button explaining to the user how the game works.
   * [Font Awesome](https://fontawesome.com/) <br>
      This was used for the logos of the social media links on my home page and also the clock symbol and home button on the game page.  
   * [Google Fonts](https://fonts.google.com/) <br>
@@ -180,7 +180,7 @@ If I was to take this game further I would like to add some different features f
 
   **2. I want the site to work as intended incrementing the quesitons and score as the user progresses, with the timer going down for each question.**
 
-  - After testing the game many times across multiple devices I am confident that the features are working as intended. The quesiotn counter runs from 1 to 10 and ends the game after the 10th question taking the user to the end game page and siplaying their score. The score increments as expected awarding 10 points for each correct answer and the time decreases form 30 seconds for each question. If the time runs out on a quesetion it automatically moves the player onto the next question.
+  - After testing the game many times across multiple devices I am confident that the features are working as intended. The quesiotn counter runs from 1 to 10 and ends the game after the 10th question taking the user to the end game page and displaying their score. The score increments as expected awarding 10 points for each correct answer and the time decreases from 30 seconds for each question. If the time runs out on a question it automatically moves the player onto the next question.
 
   * Question counter <br>
   <img src="assets/images/question-counter.png" width="350" height="150"> 
@@ -231,7 +231,7 @@ If I was to take this game further I would like to add some different features f
 
   <img src="assets/images/modal.png" width="450" height="300"> <br>
 
-  From the here the user can either click out of the modal taking them back to the home page or click the *Lets Go* button to take them straight to the game page.
+  From here the user can either click out of the modal taking them back to the home page or click the *Lets Go* button to take them straight to the game page.
 
   **5. I want to be given a choice of varied questions.**
 
@@ -322,7 +322,7 @@ Any relevant screenshots can be seen above in the **user stories** testing secti
 
 ### Responsive Testing
 
-To help with the responsiveness of my project I was using chrome dev tools throughout the build of the game. This helped to see how the game would adapt to different screen sizes and devices. It helped me choose appropriate font sizes so to not look too large and also enabled me to determine at which point I would need to add a media query. After testing with the dev tools I only ended up adding a media query for small screens 575px and smaller. This was necessary so that the questions and answers didn't appear too large on mobile devices, but I found that anything larger than this, everything still displayed nicely on the screen.
+To help with the responsiveness of my project I was using chrome dev tools throughout the build of the game. This helped to see how the game would adapt to different screen sizes and devices. It helped me choose appropriate font sizes so to not look too large and also enabled me to determine at which point I would need to add a media query. After testing with the dev tools I only ended up adding a media query for small screens 575px and smaller. This was necessary so that the questions and answers didn't appear too large on mobile devices. I found that on any screen larger than this, everything still displayed nicely on the screen.
 
 As well as using the chrome dev tools I also tested the site myself across as many different devices that I had access to. Theese included **Iphone xr,** **Iphone 12,** **Ipad mini,**
 **Samsung galaxy tablet,** **Apple macbook air** and a 21.5 inch **Apple imac** These devices gave me a good variation of the most common screen sizes used. The game responded well to each of the different screen sizes and displayed as I intended. 
@@ -380,7 +380,7 @@ As displayed in the screenshots the overall scores I got for each page were real
 ### Known Issues and Bugs
 
 * When I first added the link to the JSON API to get the questions I noticed that any question or answer with quotation marks were being displayed as **&quot** rathen than the quote marks themselves. After lots of google searching I found a solution that suggested changing the *innerText* to *innerHTML* in the game.js file. This resolved the issue and then displayed the questions as intended.
-* When I first added my timer for the 30 second countdown, I noticed that for each new question the timer was going down quicker everytime a new question was loaded. Again after researching this issue on google I realised that each time a new question was loaded the timer function was being loaded again but not reset and so going twice as fast than on the previous question. By adding **clearInterval(update);** to the timer function this stopped this problem and reset the timer for each new question.
+* When I first added my timer for the 30 second countdown, I noticed that for each new question the timer was going down quicker everytime a new question was loaded. Again after researching this issue on google I realised that each time a new question was loaded the timer function was being loaded again but not resetting and so going twice as fast than on the previous question. By adding **clearInterval(update);** to the timer function this stopped this problem and reset the timer for each new question.
 * I have noticed playing the game on my Iphone, when clicking on an answer the hover effect remains active for when the next question is displayed, leaving the previously selected answer highlighted. Although this doesn't effect the game play at all it is an issue I would like to resolve. As of yet I have not found a solution to this. 
 
 ## Deployment
