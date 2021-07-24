@@ -141,8 +141,8 @@ If I was to take this game further I would like to add some different features f
   * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) <br>
      I have used CSS3 to add my own styling to the project including layout, fonts and colours.
   * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) <br>
-     JavaScript has been used to implement the site's interactive features, Allowing the user to be interactive with the game.
-
+     JavaScript has been used to implement the site's interactive features, Allowing the user to be interactive with the game. 
+     
   ### Frameworks, Libraries and Programs Used
 
   * [Balsamiq](https://balsamiq.com/) <br>
