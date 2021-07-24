@@ -226,7 +226,7 @@ input::placeholder{
   transform: scale(1.05);
 }
 
-/* end page feedback quotes */
+/* End page feedback quotes */
 
 .feedback{
   color: rgb(248, 217, 39);
@@ -277,7 +277,7 @@ input::placeholder{
 }
 
 .modal-body{
-  background: linear-gradient(rgb(245, 39, 217), rgb(92, 243, 32))
+  background: linear-gradient(rgb(245, 39, 217), rgb(92, 243, 32));
 }
 
 .modal-body h3{
@@ -286,6 +286,7 @@ input::placeholder{
 
 .modal-footer{
   background-color: rgb(92, 243, 32);
+  ;
   border-top: 0;
   border-radius: 0;
 }
