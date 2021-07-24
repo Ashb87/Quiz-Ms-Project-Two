@@ -42,6 +42,8 @@ h4{
   margin-bottom: 0;
 }
   
+  /* General layout */
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -155,6 +157,7 @@ p{
   }
 
   /* colors for right and wrong answers */
+
 .correct {
   background-image: linear-gradient(rgb(92, 243, 32), rgb(255, 255, 255), rgb(92, 243, 32));
 }
@@ -164,6 +167,7 @@ p{
 }
 
 /* Hud (Heads up display) */
+
 .hud {
   display: flex;
   justify-content: space-between;
