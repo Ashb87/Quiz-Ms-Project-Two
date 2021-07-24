@@ -16,6 +16,7 @@ let highScoresArray = [];
 highScores.forEach(function (obj) {
   highScoresArray.push(obj.score);
 });
+
 // compare the most rencent score with the scores in the highScoreArray
 if (mostRecentScore > Math.max(...highScoresArray)) {
   // displays congrats message for a new high sore

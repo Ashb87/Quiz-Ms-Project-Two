@@ -20,8 +20,10 @@
 <body>
 
     <div class="container">
+      <!--Displays a loader before questions are loaded-->
       <div id="loader"></div>
         <div id="game" class="justify-center flex-column hidden">
+          <!--Heads up display section (HUD)-->
           <div class="hud">
             <div class="hud-item">
               <p class="hud-prefix">
@@ -40,6 +42,7 @@
             </div>
           </div>
         
+          <!--Questions and choices section-->
           <h2 id="question"></h2>
           <div class="choice-container">
             <p class="choice-prefix">A</p>
@@ -60,16 +63,18 @@
           
           <div class="hud bottom-display">
           <div>
+            <!--Displays timer for each question-->
             <p id="timeleft" class="timer"></p>
           </div>
           <div>
+            <!--Takes user back to home page-->
             <a class="home-btn" href="index.html"><i class="fas fa-home"></i></a>
            </div>
         </div>
 
         </div>
       </div>
-   
+      <!--Link to javaScript file-->
       <script src="assets/script/game.js"></script>
 </body>
 </html>    

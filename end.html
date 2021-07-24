@@ -15,9 +15,10 @@
 <body>
     <div class="container">
         <div id="end" class="flex-center flex-column">
+            <!--Displays users final score-->
             <h4>Your Score</h4>
             <h1 id='finalScore'></h1>
-            
+            <!--Displays a message to the user depending on score achieved-->
             <div id="good-effort" class="hidden">
                 <p class="feedback">Good effort! Save your score and try again to beat it!</p>
             </div>
@@ -27,17 +28,19 @@
             <div id="no-good" class="hidden">
                 <p class="feedback">What was that? 0 points! Best try again.</p>
             </div>
+            <!--Small form so user can enter their name and save score-->
             <form>
                 <input class="name-input" type="text" name="username" id="username" placeholder="Your Name">
                 <button type="submit" class="btn save-btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
                     Save My Score
                 </button>
             </form>
+            <!--Links to game page and home page-->
             <a class="btn" href="game.html">Play Again</a>
             <a class="btn" href="index.html">Home</a>
         </div>
     </div>
-
+    <!--Link to javaScript file-->
     <script src="assets/script/end.js"></script>
 </body>
 </html>

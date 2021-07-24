@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
-
+/* Fonts imported from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Yomogi&display=swap');
 html {
   font-size: 62.5%;
 }
@@ -120,6 +119,8 @@ h4{
   font-family:  'Yomogi', cursive;
 }
 
+  /* Game page choice container */
+
 .choice-container {
     display: flex;
     margin-bottom: 1rem;
@@ -162,7 +163,7 @@ p{
   background-image: linear-gradient(#f31026, rgb(255, 255, 255), #f31026);
 }
 
-/* Hud */
+/* Hud (Heads up display) */
 .hud {
   display: flex;
   justify-content: space-between;
