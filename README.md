@@ -10,6 +10,41 @@ This website has been created for my Milestone 2 Interactive Frontend Developmen
 I want to create a music quiz game with a varied choice of questions based on all types of music to test the users knowledge. The user will be given a random 10 questions, worth 10 points a quesiton, with 30 seconds to answer each.
 With a maximum of 100 points availible, the user will then be able to save their high score and try to get on the top 5 leaderboard.
 
+## Contents 
+ 
+ * [User Experience](#user-experience-ux)
+   - [Site Goals](#site-goals)
+   - [User Stories](#user-stories)
+   - [Design](#design)
+     - [Wireframes](#wireframes)
+     - [Imagery](#imagery)
+     - [Color Scheme](#color-scheme)
+     - [Typography](#typography)
+ 
+ * [Features](#features) 
+   - [Home Page](#home-page)
+   - [Game Page](#game-page)
+   - [End Page](#end-page)
+   - [Features to implement in the future](#features-i-would-like-to-implement)
+ 
+ * [Technologies Used](#technologies-used) 
+   - [Languages](#languages-used)
+   - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs-used)
+ 
+ * [Testing](#testing)
+   - [Testing User Stories and Site Goals](#testing-user-stories-and-site-goals)
+   - [Features Testing](#features-testing)
+   - [Responsive Testing](#responsive-testing)
+   - [HTML & CSS Testing](#html-and-css-validator)
+   - [Lighthouse Testing](#lighthouse-testing)
+   - [Further Testing](#further-testing)
+   - [Known issues & Bugs](#known-issues-and-bugs)
+   
+ * [Deployment](#deployment) 
+
+ * [Credits](#credits)
+
+
 ## User Experience-(UX)
 
 ### Site Goals
