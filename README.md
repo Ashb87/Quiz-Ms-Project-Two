@@ -300,23 +300,23 @@ Any relevant screenshots can be seen above in the **user stories** testing secti
     - When the user clicks on the play button a spinning loader displays on the screen while the questions are loading to prevent the user seeing either a blank screen or dummy text in place of the actual questions.
 
   * ### End Page
-    **A display of the users end score.**
+    **1.A display of the users end score.**
 
     - This has been checked and displays the correct score after the 10th question is answered. 
 
-    **A message for the user that changes depending on the score achieved.**
+    **2.A message for the user that changes depending on the score achieved.**
 
     - Depending if the user scores 0, gets a new high score, or something in between, a different end message will be displayed. This has been checked for each scenario and works as expected each time.
 
-    **The optiion for the user to enter their name and save their score which will be added to the highscore page if the score is high enough.**
+    **3.The optiion for the user to enter their name and save their score which will be added to the highscore page if the score is high enough.**
 
     - I have checked this using different devices and also asked friends and family to play the game and save their score to see if they appear on the leaderboard. Each time it has worked as intended.
 
-    **A button to let the user play again.**
+    **4.A button to let the user play again.**
 
     - At the end of the game the user has the option to play again. By clicking the *Play Again* button the user is automatically taken back to the start of the game. This works as expected.
 
-    **A button to take the user back to the home page.**
+    **5.A button to take the user back to the home page.**
 
     - At the end of the game the user has the option to return to the home page. By clicking the *Home* button the user is automatically taken back to the main menu This works as expected.
 
